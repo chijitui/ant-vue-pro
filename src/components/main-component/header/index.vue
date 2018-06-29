@@ -11,7 +11,7 @@
       <a-icon type="bell" class="header-tool-icon" />
       <a-dropdown v-model="visible">
         <span class="myspace">
-          <a-avatar class="my-avatar" src="https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png" />
+          <a-avatar class="my-avatar" src="https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png" />
           <span>你的肖同学</span>
         </span>
         <a-menu slot="overlay">
