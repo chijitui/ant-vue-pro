@@ -8,7 +8,7 @@
         <pro-header :collapsed="collapsed" @toggleCollapsed="toggleCollapsed"></pro-header>
       </a-layout-header>
       <a-layout-content id="pro-content">
-        <router-view></router-view>
+        <router-view :collapsed="collapsed"></router-view>
       </a-layout-content>
     </a-layout>
   </a-layout>

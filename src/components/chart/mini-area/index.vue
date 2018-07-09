@@ -1,5 +1,5 @@
 <template>
-  <div :id="chartId"></div>
+  <div :id="chartId" :width="width"></div>
 </template>
 
 <script>
@@ -21,11 +21,21 @@ export default {
       type: Boolean,
       default: false,
     },
+    width: {
+      type: Number,
+      default: 284,
+    },
+    chartId: {
+      type: String,
+      default: `mini-area-${+new Date()}`,
+    },
+  },
+  computed: {
   },
   data() {
     return {
       chart: null,
-      chartId: `${+new Date()}`,
+      style: {},
     };
   },
   watch: {
@@ -35,12 +45,15 @@ export default {
     data(_data) {
       this.chart.changeData(_data);
     },
+    width(_width) {
+      this.chart.changeWidth(_width);
+    },
   },
   mounted() {
     this.chart = new G2.Chart({
       container: this.chartId,
       height: this.height,
-      forceFit: true,
+      width: this.width,
       padding: 'auto',
     });
     this.chart.source(this.data);
